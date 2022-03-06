@@ -2,7 +2,7 @@ module V1
 	class CartsController < ApplicationController
 		before_action :set_cart
 
-		def index
+		def cart_items
 			if @cart
 				@cart_items = @cart.cart_items.order('id')
 			end

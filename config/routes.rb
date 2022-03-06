@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get '/listing_items', to: 'application#listing_items'
 
   scope module: :v1 do
-    resources :carts, except: [:update, :destroy] do
+    resources :carts, except: [:index, :create, :update, :destroy] do
+      get :cart_items, on: :collection
       put :update_cart_item, on: :collection
 
       delete :remove_item, on: :collection
