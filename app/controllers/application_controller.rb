@@ -9,6 +9,10 @@ class ApplicationController < ActionController::API
     render json: response.body
   end
 
+  def render_error_message(e)
+    render json: {success: false, errors: e}
+  end
+
   protected
 
   def configure_permitted_parameters

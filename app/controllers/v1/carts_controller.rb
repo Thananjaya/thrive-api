@@ -8,7 +8,9 @@ module V1
 			end
 		end
 
-		def update_cart_item	
+		def update_cart_item
+			return render_error_message(['Quantity to be greater than 0']) if params[:quantity].to_i == 0
+
 			Cart.transaction do
 				if @cart
 					cart_item = @cart.cart_items.where(
