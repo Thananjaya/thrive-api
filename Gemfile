@@ -12,7 +12,7 @@ gem 'mysql2', '~> 0.5'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 
-#gem for deise token auth
+#gem for user authentication
 gem 'devise_token_auth'
 
 #gem for securing env variables
@@ -25,7 +25,7 @@ gem 'oj'
 #gem for http client
 gem 'faraday'
 
-#gem for debudding
+#gem for debugging
 gem 'pry', '~> 0.13.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
