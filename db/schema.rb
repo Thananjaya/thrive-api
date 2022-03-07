@@ -16,13 +16,12 @@ ActiveRecord::Schema.define(version: 2022_03_06_125504) do
     t.bigint "cart_id"
     t.string "item_id"
     t.integer "quantity"
-    t.string "integer"
     t.integer "addon_id"
     t.float "addon_price"
     t.integer "variation_id"
     t.float "variation_price"
-    t.float "total_price"
     t.float "base_price"
+    t.float "total_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cart_id"], name: "index_cart_items_on_cart_id"
